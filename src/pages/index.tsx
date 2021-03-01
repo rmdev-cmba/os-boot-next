@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Jumbotron } from 'reactstrap';
-import { Menu } from '../../components/Menu';
+import { Menu } from '../components/Menu';
 
 
 
