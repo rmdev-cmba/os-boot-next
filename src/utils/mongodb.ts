@@ -34,6 +34,6 @@ export async function connectToDatabase() {
     cachedClient = client;
     cachedDb = db;
 
+   
     return {client, db};
-
 }
