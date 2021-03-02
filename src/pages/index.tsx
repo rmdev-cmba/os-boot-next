@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react'; // informa que type: React
 import { Button, Container, Jumbotron } from 'reactstrap';
 import { Menu } from '../components/Menu';
 

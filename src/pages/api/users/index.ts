@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { connectToDatabase } from '../../../utils/mongodb';
 
+// https://www.youtube.com/watch?v=3Eam3ogU-uk+%2814%3A30%29+Lucas+Nhimi
+
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
         const { method } = req;
@@ -9,6 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         switch (method) {
             case 'GET':
                 // Get data from your database
+               
                 const { db } = await connectToDatabase();
                 const data = await db.collection('user').find().toArray();
 

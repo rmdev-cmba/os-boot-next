@@ -1,5 +1,5 @@
 
-import { MongoClient, Db } from 'mongodb';
+import * as mongodb from 'mongodb';
 
 const { MONGODB_URI, MONGODB_DB } = process.env
 
@@ -15,8 +15,8 @@ if (!MONGODB_DB) {
     )
 }
 
-let cachedClient: MongoClient; // typescript
-let cachedDb: Db; //typescript
+let cachedClient: mongodb.MongoClient; // typescript
+let cachedDb: mongodb.Db; //typescript
 
 
 export async function connectToDatabase() {
@@ -24,7 +24,7 @@ export async function connectToDatabase() {
         return { client: cachedClient, db: cachedDb }
     }
 
-    const client = await MongoClient.connect(MONGODB_URI, {
+    const client = await mongodb.MongoClient.connect(MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
