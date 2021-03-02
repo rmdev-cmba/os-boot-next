@@ -35,7 +35,7 @@ export const Menu = (props: Props) => {
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/orcamento">Orçamento</NavLink>
+              <NavLink href="/api/users">Users</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
